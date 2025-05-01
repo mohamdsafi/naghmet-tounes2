@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naghmet Tounes | Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">Naghmet Tounes</div>
+  </header>
+
+  <main>
+    <h1>Featured Artists</h1>
+    <div class="gallery-grid">
+      <a class="card" href="artist-detail-lotfi.html">
+        <img src="images\lotfi boushnek\lotfi1.jpeg" alt="Lotfi Bouchnak" />
+        <h3>Lotfi Bouchnak</h3>
+      </a>
+      <a class="card" href="artist-detail-zied.html">
+        <img src="images\zied gharsa\zied1.jpeg" alt="Zied Gharsa" />
+        <h3>Zied Gharsa</h3>
+      </a>
+      <a class="card" href="artist-detail-hedi.html">
+        <img src="images\hedi habbouba\hedi1.webp" alt="Hédi Habbouba" />
+        <h3>Hédi Habbouba</h3>
+      </a>
+      <a class="card hidden" href="artist-detail-jormana.html">
+        <img src="images\lotfi jormana\jormana1.webp" alt="Lotfi Jormana" />
+        <h3>Lotfi Jormana</h3>
+      </a>
+      <a class="card hidden" href="artist-detail-jammousi.html">
+        <img src="images\med jammousi\ammousi1.jpeg" alt="Mohamed Jammousi" />
+        <h3>Mohamed Jammousi</h3>
+      </a>
+      <a class="card hidden" href="artist-detail-thraya.html">
+        <img src="images\sedak thraya\thraya 1.jpeg" alt="Sadak Thraya" />
+        <h3>Sadak Thraya</h3>
+      </a>
+      <a class="card hidden" href="artist-detail-nour.html">
+        <img src="images\nour arjoun\nour arjoun.webp" alt="Nour arjoun" />
+        <h3>Nour arjoun</h3>
+      </a>
+      <a class="card hidden" href="artist-detail-samir.html">
+        <img src="images\samir loussif\samir lousif1.jpeg" alt="Sami lousif" />
+        <h3>Samir lousif</h3>
+      </a>
+      <a class="card hidden" href="artist-detail-latifa.html">
+        <img src="images\latifa arfaoui\latifa1.jpeg" alt="Latifa Arfaoui" />
+        <h3>Latifa Arfaoui</h3>
+      </a>
+    </div>
+    <div class="see-more" style="text-align:center; margin: 30px 0;">
+      <button onclick="showMore()">See More</button>
+      <button onclick="seeLess()" id="seeLessBtn" style="display: none;">See Less</button>
+    </div>
+  </main>
+
+  <footer>
+    <div class="pagination-nav">
+      <a href="index.html" class="page-link">1</a>
+      <a href="about.html" class="page-link">2</a>
+      <a href="gallery.html" class="page-link active">3</a>
+      <a href="contact.html" class="page-link">4</a>
+    </div>
+    <p>&copy; 2025 Naghmet Tounes. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function showMore() {
+      document.querySelectorAll('.card.hidden').forEach(card => {
+        card.classList.remove('hidden');
+      });
+      document.getElementById('seeLessBtn').style.display = 'inline-block';
+      document.querySelector('.see-more button[onclick="showMore()"]')?.style.setProperty('display', 'none');
+    }
+
+    function seeLess() {
+      const allCards = document.querySelectorAll('.gallery-grid .card');
+      allCards.forEach((card, index) => {
+        if (index >= 3) {
+          card.classList.add('hidden');
+        }
+      });
+      document.getElementById('seeLessBtn').style.display = 'none';
+      document.querySelector('.see-more button[onclick="showMore()"]')?.style.setProperty('display', 'inline-block');
+    }
+  </script>
+</body>
+</html>
