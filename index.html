@@ -5,6 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Naghmet Tounes | Home</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    main {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+    .left-content {
+      flex: 1 1 60%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .side-box {
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-left: 4px solid #007BFF;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      margin-bottom: 20px;
+    }
+    .right-content {
+      flex: 1 1 35%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .right-content figure {
+      margin: 0;
+      text-align: center;
+    }
+    .right-content img {
+      width: 100%;
+      border-radius: 16px;
+      object-fit: cover;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    }
+    .right-content figcaption {
+      margin-top: 8px;
+      font-style: italic;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -12,41 +54,58 @@
   </header>
 
   <main>
-    <section class="banner">
-      <h1>Welcome to Naghmet Tounes</h1>
-      <p>Discover the heartbeat of Tunisia through its iconic voices and melodies.</p>
-    </section>
+    <div class="left-content">
+      <div class="side-box">
+        <h1>Welcome to Naghmet Tounes</h1>
+        <p>Discover the heartbeat of Tunisia through its iconic voices and melodies.</p>
+      </div>
 
-    <section class="intro">
-      <h2>About This Project</h2>
-      <p>
-        Naghmet Tounes is a digital archive and cultural platform dedicated to Tunisia's musical identity. This website was created to help music lovers, researchers, and new listeners experience the essence of Tunisian heritage through the lives and works of its legendary and modern artists.
-      </p>
-      <p>
-        Here, you will find detailed biographies, music samples, photographs, and insights into the historical and cultural context that shaped each musician’s contribution to Tunisian music.
-      </p>
-    </section>
+      <div class="side-box">
+        <h2>About This Project</h2>
+        <p>
+          Naghmet Tounes is a digital archive and cultural platform dedicated to Tunisia's musical identity. This website was created to help music lovers, researchers, and new listeners experience the essence of Tunisian heritage through the lives and works of its legendary and modern artists.
+        </p>
+        <p>
+          Here, you will find detailed biographies, music samples, photographs, and insights into the historical and cultural context that shaped each musician’s contribution to Tunisian music.
+        </p>
+      </div>
 
-    <section class="features">
-      <h2>What You’ll Find</h2>
-      <ul>
-        <li>🎶 Artist profiles from the golden age to contemporary stars</li>
-        <li>🎧 Handpicked audio samples for each musician</li>
-        <li>📷 Visual gallery highlighting their journey and influence</li>
-        <li>📖 Insights into Tunisia’s cultural and musical history</li>
-        <li>🧭 Easy-to-navigate sections with a modern, clean interface</li>
-      </ul>
-    </section>
+      <div class="side-box">
+        <h2>What You’ll Find</h2>
+        <ul>
+          <li>🎶 Artist profiles from the golden age to contemporary stars</li>
+          <li>🎧 Handpicked audio samples for each musician</li>
+          <li>📷 Visual gallery highlighting their journey and influence</li>
+          <li>📖 Insights into Tunisia’s cultural and musical history</li>
+          <li>🗭 Easy-to-navigate sections with a modern, clean interface</li>
+        </ul>
+      </div>
 
-    <section class="intro">
-      <h2>Why Naghmet Tounes?</h2>
-      <p>
-        Music plays a central role in Tunisia's national identity. Naghmet Tounes is not just a tribute but also a bridge between generations—preserving musical legacy while introducing it to newer audiences in an engaging and interactive way.
-      </p>
-      <p>
-        Whether you are here for research, discovery, or nostalgia, we welcome you to explore the rhythm of Tunisia’s voice.
-      </p>
-    </section>
+      <div class="side-box">
+        <h2>Why Naghmet Tounes?</h2>
+        <p>
+          Music plays a central role in Tunisia's national identity. Naghmet Tounes is not just a tribute but also a bridge between generations—preserving musical legacy while introducing it to newer audiences in an engaging and interactive way.
+        </p>
+        <p>
+          Whether you are here for research, discovery, or nostalgia, we welcome you to explore the rhythm of Tunisia’s voice.
+        </p>
+      </div>
+    </div>
+
+    <div class="right-content">
+      <figure>
+        <img src="image-festive.jpeg" alt="Tunisian Music Festival">
+        <figcaption>Live performance at a Tunisian music festival</figcaption>
+      </figure>
+      <figure>
+        <img src="artshow.jpeg" alt="Tunisian Cultural Art Show">
+        <figcaption>Traditional cultural showcase with music and crafts</figcaption>
+      </figure>
+      <figure>
+        <img src="streetperformance.jpeg" alt="Traditional Tunisian Performance">
+        <figcaption>Street performance blending folk and Sufi rhythms</figcaption>
+      </figure>
+    </div>
   </main>
 
   <footer>
